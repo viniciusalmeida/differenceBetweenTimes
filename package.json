@@ -1,0 +1,12 @@
+{
+  "name": "lapantime-coffee",
+  "version": "0.0.0",
+  "devDependencies": {
+    "coffee-script": "1.8.0",
+    "mocha": "2.0.1",
+    "underscore": "1.7.0"
+  },
+  "scripts": {
+    "test": "coffee -c ./test && coffee -c ./lib && mocha --reporter Progress"
+  }
+}
