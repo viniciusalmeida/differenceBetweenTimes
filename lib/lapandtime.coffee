@@ -8,13 +8,13 @@ lapandtime =
   convert: (timeString) ->
     date = new Date 0
 
-    data = _.filter timeString.split(@standardLimiter), (i) ->
-      return true if parseInt(i, 10) == 0
-      !!parseInt(i, 10)
+    explodedTimeString = _.filter timeString.split(@standardLimiter), (chunk) ->
+      return true if parseInt(chunk, 10) == 0
+      !!parseInt(chunk, 10)
     .reverse()
 
-    for i, index in data
-      date["set#{@timeUnits[index]}"](i)
+    for chunk, index in explodedTimeString
+      date["set#{@timeUnits[index]}"](chunk)
 
     date.getTime()
 
