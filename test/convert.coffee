@@ -1,7 +1,7 @@
 assert     = require 'assert'
 lapandtime = require '../lib/lapandtime'
 
-describe 'time string to timestamp functionality -', ->
+describe '#convert convert time string to timestamp -', ->
   it 'basic convertions', ->
     assert.equal lapandtime.convert('00.500'),    500
     assert.equal lapandtime.convert('01.500'),    1500
