@@ -30,4 +30,15 @@ lapandtime =
     return convertFunctions.withoutMinutes time if timeStamp < 60000
     convertFunctions.withMinutes time
 
+  difference: (timesArray) ->
+    differences = []
+
+    for time, index in timesArray
+      if index == 0
+        differences[0] = time
+      else
+        differences.push time - timesArray[0]
+
+    differences
+
 module.exports = lapandtime
