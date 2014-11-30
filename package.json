@@ -8,6 +8,6 @@
     "pad": "0.0.5"
   },
   "scripts": {
-    "test": "coffee -c ./test && coffee -c ./lib && mocha --reporter Progress"
+    "test": "coffee -c ./test && coffee -c ./lib && mocha --reporter spec"
   }
 }
