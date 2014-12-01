@@ -41,4 +41,19 @@ lapandtime =
 
     differences
 
+  differenceBetweenTimes: (timeStringsArray) ->
+    convertedArray = _.map timeStringsArray, (timeString) =>
+      @convert timeString
+
+    differences = [timeStringsArray[0]]
+
+    for time in convertedArray.slice 1
+      diff = @difference([convertedArray[0], time])[1]
+      differences.push if diff < 0
+        "-#{@convertToTimeString diff}"
+      else
+        "+#{@convertToTimeString diff}"
+
+    differences
+
 module.exports = lapandtime
