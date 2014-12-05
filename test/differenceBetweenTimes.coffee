@@ -1,8 +1,7 @@
 assert     = require 'assert'
 lapandtime = require '../lib/lapandtime'
 
-describe """
-#differenceBetweenTimes is the public API from lib - returns the difference between
+describe """#differenceBetweenTimes is the public API from lib - returns the difference between
 the first time/index from parameter and the another indexes""", ->
   it 'basic difference between two times', ->
     assert.deepEqual lapandtime.differenceBetweenTimes(['00.500', '01.000']), ['00.500', '+00.500']
