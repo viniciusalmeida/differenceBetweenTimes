@@ -23,12 +23,21 @@ lapandtime =
     timeStamp = timeStamp * -1 if timeStamp < 0
     time = new Date timeStamp
 
-    convertFunctions =
-      withMinutes: (t) -> "#{pad 2, t.getMinutes(), '0'}:#{pad 2, t.getSeconds(), '0'}.#{pad 3, t.getMilliseconds(), '0'}"
-      withoutMinutes: (t) -> "#{pad 2, t.getSeconds(), '0'}.#{pad 3, t.getMilliseconds(), '0'}"
+    return @convertTimeStringWithoutMinutes time if timeStamp < 60000
+    @converToTimeStringWithMinutes time
 
-    return convertFunctions.withoutMinutes time if timeStamp < 60000
-    convertFunctions.withMinutes time
+  converToTimeStringWithMinutes: (timeStamp) ->
+    minutes = pad 2, timeStamp.getMinutes(), '0'
+    seconds = pad 2, timeStamp.getSeconds(), '0'
+    milliseconds = pad 3, timeStamp.getMilliseconds(), '0'
+
+    "#{minutes}:#{seconds}.#{milliseconds}"
+
+  convertTimeStringWithoutMinutes: (timeStamp) ->
+    seconds = pad 2, timeStamp.getSeconds(), '0'
+    milliseconds = pad 3, timeStamp.getMilliseconds(), '0'
+
+    "#{seconds}.#{milliseconds}"
 
   difference: (timesArray) ->
     differences = []
