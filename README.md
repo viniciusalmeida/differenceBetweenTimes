@@ -1,5 +1,7 @@
 # differenceBetweenTimes
 
+[![Build Status](https://travis-ci.org/viniciusalmeida/differenceBetweenTimes.svg?branch=master)](https://travis-ci.org/viniciusalmeida/differenceBetweenTimes)
+
 A node package to show the difference between two or more formated times.
 
 This library was created to parser times served by http://ergast.com/mrd.
