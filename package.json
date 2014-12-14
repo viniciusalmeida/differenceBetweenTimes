@@ -1,6 +1,6 @@
 {
   "name": "differencebetweentimes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A node package to show the difference between two or more formated times.",
   "main": "index.js",
   "repository": {
