@@ -1,7 +1,7 @@
 _   = require 'underscore'
 pad = require 'pad'
 
-lapandtime =
+differenceBetweenTimes =
   version: '0.0.1'
   standardLimiter: /(\.|:)/
   timeUnits: ['Milliseconds', 'Seconds', 'Minutes', 'Hours']
@@ -65,4 +65,4 @@ lapandtime =
 
     differences
 
-module.exports = lapandtime
+module.exports = differenceBetweenTimes
