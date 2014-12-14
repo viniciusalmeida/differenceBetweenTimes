@@ -1,11 +1,16 @@
 {
-  "name": "differenceBetweenTimes",
-  "version": "0.1.0",
-  "description": "",
-  "dependencies": {
-    "coffee-script": "1.8.0"
+  "name": "differencebetweentimes",
+  "version": "0.1.1",
+  "description": "A node package to show the difference between two or more formated times.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/viniciusalmeida/differenceBetweenTimes.git"
   },
-  "devDependencies": {
+  "homepage": "https://github.com/viniciusalmeida/differenceBetweenTimes",
+  "keywords": ["difference", "time", "lap", "partials"],
+  "dependencies": {
+    "coffee-script": "1.8.0",
     "mocha": "2.0.1",
     "underscore": "1.7.0",
     "pad": "0.0.5"
@@ -13,5 +18,10 @@
   "scripts": {
     "test": "coffee -c ./test && coffee -c ./lib && mocha --reporter spec",
     "install": "coffee -c ./lib ./index.coffee"
+  },
+  "author": {
+    "name": "Vinícius Almeida",
+    "email": "vinialm88@gmail.com",
+    "url": "http://viniciusalmeida.github.io"
   }
 }
