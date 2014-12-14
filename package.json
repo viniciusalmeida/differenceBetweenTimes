@@ -1,13 +1,17 @@
 {
-  "name": "lapantime-coffee",
-  "version": "0.0.0",
+  "name": "differenceBetweenTimes",
+  "version": "0.1.0",
+  "description": "",
+  "dependencies": {
+    "coffee-script": "1.8.0"
+  },
   "devDependencies": {
-    "coffee-script": "1.8.0",
     "mocha": "2.0.1",
     "underscore": "1.7.0",
     "pad": "0.0.5"
   },
   "scripts": {
-    "test": "coffee -c ./test && coffee -c ./lib && mocha --reporter spec"
+    "test": "coffee -c ./test && coffee -c ./lib && mocha --reporter spec",
+    "install": "coffee -c ./lib ./index.coffee"
   }
 }
